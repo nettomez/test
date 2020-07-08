@@ -1,0 +1,30 @@
+Primero github es un servicio en que permite guardar los proyectos en carpetas llamadas 
+repositorios,
+el fin de guardar un proyecto en un repositorio es poder
+ editarlo en cualquier momento, a demas de eso poder manejar un registro
+  de que cambio se le van haciendo al proyecto estos cambios se van guardando de 
+  manera progresiva y se puede compartir de manera rapida con un link, como decir
+   mira aqui esta la carpeta, estos proyectos (Repositorios) pueden ser publicos y privados, 
+   si son publicos cualquiera puede acceder a el, y si son privados solo los usuarios que vos
+    invites pueden acceder a el.
+    estos cambios se hacen por medio de commits que son los que suben a el repositorio, 
+    el repositorio puede tener como copias de el mismo para que si no te gusta podas revertir el
+     commit , los commit se pueden obtener de 2 maneras, push vos envias de tu compu
+     y pull vos recibis a tu compu
+     git se maneja por consola llamada gitbash esta la instalas con el github, ahora para poder 
+     manejar tus proyectos lo haces atraves de la gitbash o por cmd el command promt
+ya tenes conectado el proyecto a tu repositorio
+el comando git status te permite ver el estado actual del repositorio con tu computadora local
+hay te indican que codigos tenes que poner
+en el cmd o el git bash
+sin embargo visual code para tu comodidad trae incorporado un cmd aqui para que la trabajes
+directamente aqui, no se conectan como programas sino por cmd
+te voy a dejar aqui abajo los codigos que tenes que utilizar siempre que queras subir algo nuevo
+a tu proyecto PRIMERO: ADD
+git add -A .
+y va añadir todo a tu proyecto
+SEGUNDO: COMMIT
+git commit -m "COMENTARIO"
+TERCERO: push
+git push
+y ya esta subido cuando queras subir algo mas
