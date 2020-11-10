@@ -15,7 +15,7 @@ class CrearTablaRoll extends Migration
     {
         Schema::create('roll', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre',50);
+            $table->string('nombre',50)->unique();
             $table->timestamps();
         });
     }

@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome againnnn');
-    
+    return view('welcome');
 });
-Route::get('/netto', function () {
+Route::get('/netto-meza', function () {
     return view('hola');
 });
+
+
+/*Route::get('permiso', 'PermisoController@create');
+Route::get('permiso', 'PermisoController@index');*/
+Route::view('permiso', 'permiso');
