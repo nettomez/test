@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+/*use Illuminate\Support\Facades\Route;*/
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/netto-meza', function () {
     return view('hola');
 });
+*/
+Route::get('/','InicioController@index');
 
 
 /*Route::get('permiso', 'PermisoController@create');
 Route::get('permiso', 'PermisoController@index');*/
-Route::view('permiso', 'permiso');
+/*
+Route::view('permiso', 'permiso'); 
+*/
