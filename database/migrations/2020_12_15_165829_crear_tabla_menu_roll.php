@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CrearTablaUsuarioRoll extends Migration
+class CrearTablaMenuRoll extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CrearTablaUsuarioRoll extends Migration
      */
     public function up()
     {
-        Schema::create('usuario_roll', function (Blueprint $table) {
-            $table->Increments('id');
+        Schema::create('menu_roll', function (Blueprint $table) {
             $table->unsignedBigInteger('roll_id');
-            $table->foreign('roll_id')->references('id')->on('roll');
-            $table->unsignedBigInteger('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('usuario');
-            $table->boolean('estado');
-            $table->timestamps();
+            $table->foreign('roll_id','fk_menuroll_roll')->references('id')->on('roll')
+            ->onDelete('restrict')->onUpdate('restrict');
+            $table->unsignedInteger('menu_id');
+            $table->foreign('menu_id','fk_menuroll_menu')->references('id')->on('menu')
+            ->onDelete('restrict')->onUpdate('restrict');
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_spanish_ci';
         });
@@ -33,6 +32,6 @@ class CrearTablaUsuarioRoll extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario_roll');
+        Schema::dropIfExists('menu_roll');
     }
 }
