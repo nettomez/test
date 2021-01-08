@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Admin\Menu;
+use App\Http\Requests\ValidacionMenu;
 
-class MenuController extends Controller
+class MenuController extends Controller 
 {
     /**
      * Display a listing of the resource.
@@ -34,9 +36,10 @@ class MenuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(Request $request)
+    public function guardar(ValidacionMenu $request)
     {
-        //
+       /**Menu::create($request->all());*/
+       Menu::create($request->all());
     }
 
     /**

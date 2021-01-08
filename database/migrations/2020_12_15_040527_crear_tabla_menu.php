@@ -20,7 +20,7 @@ class CrearTablaMenu extends Migration
             $table->string('url',100);
             $table->unsignedInteger('orden')->default(0);
             $table->string('icono',50)->nullable();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 
