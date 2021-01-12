@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ValidarCampoUrl;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ValidacionMenu extends FormRequest
@@ -24,17 +25,17 @@ class ValidacionMenu extends FormRequest
     public function rules()
     {
         return [
-           'nombre'=> 'required|max:50',
-           'url'=> 'required|max:50',
+           'nombre'=> 'required|max:50|unique:menu,nombre,' . $this->route('id'),
+           'url'=> ['required','max:77', new ValidarCampoUrl],
            'icono'=> 'nullable|max:50',
         ];
     }
 
- public function messages()
+ /**public function messages()
 {
     return [
-        'title.required' => 'A title is required',
-        'body.required'  => 'A message is required',
+        'nombre.required' => 'Un nombre es requerido',
+        'url.required'  => 'A message is required',
     ];
-}
+}*/
 }

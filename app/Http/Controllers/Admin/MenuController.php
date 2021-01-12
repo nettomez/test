@@ -40,11 +40,12 @@ class MenuController extends Controller
     {
        /**Menu::create($request->all());*/
        Menu::create($request->all());
+       return redirect('admin/menu/crear')->with('mensaje', 'Menu creado con exito');
     }
 
     /**
      * Display the specified resource.
-     *
+     *                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -73,7 +74,7 @@ class MenuController extends Controller
      */
     public function actualizar(Request $request, $id)
     {
-        //
+        return redirect('admin/menu')->with('mensaje', 'Menu actualizado con exito');
     }
 
     /**
